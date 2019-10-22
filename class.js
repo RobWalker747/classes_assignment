@@ -6,8 +6,11 @@ class Person {
     constructor(firstName, middleName, lastName) {
         this.firstName = firstName;
         this.middleName = middleName;
-        this.lastName = lastName;
+        this.lastName = lastName;    
     }   
+    fullname() {
+        return this.firstName + " " + this.middleName + " " + this.lastName
+    }
 }
 
 let Shaun = new Person("Shaun", "Rick", "Thompson")
@@ -16,3 +19,6 @@ let Jamie = new Person("Jamie", "Ann", "McKay")
 console.log(Jamie);
 console.log(Shaun);
 // b. Write a method in `Person` called `fullName` that will return a formatted string of an instance's full name. Call this method on both the instances you created in part a.
+
+console.log(Jamie.fullname())
+console.log(Shaun.fullname())

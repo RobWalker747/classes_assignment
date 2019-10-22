@@ -62,20 +62,21 @@ class Dog {
         this.hungry = hungry;
     }
     playFetch()  {
-        this.hungry === false && this.mood === 'playful'
+        this.hungry = false 
+        this.mood = 'playful'
         return 'Ruff!'
-        }
-        feed() {
-            if (this.hungry === false) {
-                console.log("Woof!")
-            } else {
-                console.log("The dog doesn't look hungry")
-            }
-            toString() {
-                return this.mood 
-            }
+    }
+    feed() {
+        if (this.hungry === false) {
+            console.log("Woof!")
+        } else {
+            console.log("The dog doesn't look hungry")
         }
     }
+    toString() {
+        return this.name + "is a " + this.breed + " and she is " + this.hungry + "and" + this.mood;
+    }
+}
 
     let wolf = new Dog("Roxy", "Pitbull", "Loveable" , true)
     console.log(wolf.feed());
